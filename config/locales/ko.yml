@@ -1,7 +1,7 @@
 ---
 ko:
   about:
-    about_mastodon_html: '휘핑 에디션 :: 오리지널 캐릭터의 교류를 목적으로 하는 커뮤니티를 위해 제공되는 마스토돈 에디션.'
+    about_mastodon_html: '자캐 커뮤니티 THE DOOR 마스토돈 서버'
     contact_missing: 미설정
     contact_unavailable: 없음
     hosted_on: "%{domain}에서 호스팅 되는 마스토돈"
