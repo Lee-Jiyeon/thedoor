@@ -22,7 +22,7 @@ import { clearHeight } from '../../actions/height_cache';
 import { expandNotifications } from '../../actions/notifications';
 import { fetchServer, fetchServerTranslationLanguages } from '../../actions/server';
 import { expandHomeTimeline } from '../../actions/timelines';
-import initialState, { me, owner, singleUserMode, trendsEnabled, trendsAsLanding } from '../../initial_state';
+import initialState, { me, owner, singleUserMode} from '../../initial_state';
 
 import BundleColumnError from './components/bundle_column_error';
 import Header from './components/header';
@@ -40,7 +40,6 @@ import {
   AccountTimeline,
   AccountGallery,
   HomeTimeline,
-  LocalTimeline,
   Followers,
   Following,
   AccountDirectMessages,
@@ -62,7 +61,9 @@ import {
   Explore,
   Onboarding,
   About,
-  PrivacyPolicy
+  PrivacyPolicy,
+  Directory,
+  Notice
 } from './util/async-components';
 import { WrappedSwitch, WrappedRoute } from './util/react_router_helpers';
 
@@ -172,10 +173,7 @@ class SwitchingColumnsArea extends PureComponent {
       }
     } else if (singleUserMode && owner && initialState?.accounts[owner]) {
       redirect = <Redirect from='/' to={`/@${initialState.accounts[owner].username}`} exact />;
-    } 
-    // else if (trendsEnabled && trendsAsLanding) {
-    //   redirect = <Redirect from='/' to='/explore' exact />;
-    // } 
+    }
     else {
       redirect = <Redirect from='/' to='/about' exact />;
     }
@@ -211,7 +209,8 @@ class SwitchingColumnsArea extends PureComponent {
           <WrappedRoute path='/pinned' component={PinnedStatuses} content={children} />
 
           <WrappedRoute path='/start' exact component={Onboarding} content={children} />
-          {/* <WrappedRoute path='/directory' component={Directory} content={children} /> */}
+          <WrappedRoute path='/notice' component={Notice} content={children} />
+          <WrappedRoute path='/directory' component={Directory} content={children} />
           <WrappedRoute path={['/search']} component={Explore} content={children} />
           <WrappedRoute path={['/publish', '/statuses/new']} component={Compose} content={children} />
 

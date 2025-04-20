@@ -180,7 +180,8 @@ Rails.application.routes.draw do
   get '/web/(*any)', to: redirect('/%{any}', status: 302), as: :web, defaults: { any: '' }, format: false
   get '/about',      to: 'about#show'
   get '/about/more', to: redirect('/about')
-
+  get '/notice',     to: 'notice#show'
+  get '/directory',  to: 'directory#show'
   get '/privacy-policy', to: 'privacy#show', as: :privacy_policy
   get '/terms',          to: redirect('/privacy-policy')
 

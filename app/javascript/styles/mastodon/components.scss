@@ -10,9 +10,11 @@
   overflow: hidden;
   position: relative;
 }
-.batch-table__row .media-gallery{
+
+.batch-table__row .media-gallery {
   max-height: 500px;
 }
+
 .inline-alert {
   color: $valid-value-color;
   font-weight: 400;
@@ -1343,7 +1345,7 @@ body > [data-popper-placement] {
   .media-gallery,
   .video-player,
   .audio-player {
-    max-height:unset;
+    max-height: unset;
     margin-top: 16px;
   }
 
@@ -2494,12 +2496,9 @@ $ui-header-height: 55px;
   }
 
   .ui__header__logo img.logo {
-    content: url("../images/logos/m_logo_dark.png");
+    content: url('../images/logos/m_logo_dark.png');
   }
-
 }
-
-
 
 @media screen and (max-width: $no-gap-breakpoint - 285px - 1px) {
   $sidebar-width: 55px;
@@ -9393,4 +9392,101 @@ noscript {
     line-height: inherit;
     padding: 0;
   }
+}
+
+/* notice.css */
+.notice {
+  font-family: 'Noto Sans', sans-serif;
+
+  // background-color: #f8f8f8;
+  // padding: 20px;
+  // border-radius: 8px;
+  // max-width: 1000px;
+  // margin: 20px auto;
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: $primary-text-color;
+  margin-bottom: 30px;
+}
+
+.notice h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: $primary-text-color;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.notice p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: $primary-text-color;
+  margin-bottom: 10px;
+}
+
+.notice p b {
+  font-weight: bold;
+}
+
+.notice span {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: $primary-text-color;
+}
+
+.notice .meta {
+  font-size: 1em;
+  color: $darker-text-color;
+  text-align: center;
+}
+
+.notice .list {
+  font-size: 1.1em;
+  color: $primary-text-color;
+  margin-left: 20px;
+}
+
+.notice ul {
+  list-style-type: disc;
+  margin-left: 50px;
+}
+
+.notice ul li {
+  margin-bottom: 8px;
+}
+
+.notice .limeta {
+  color: $darker-text-color;
+  list-style-type: none;
+}
+
+.notice-rating-table {
+  table-layout: fixed;
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-left: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.notice-rating-table th {
+  background-color: $ui-primary-color;
+  color: $primary-text-color;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.notice-rating-table td {
+  width: 50%;
+  max-width: 250px;
+  word-wrap: break-word;
+  border: 1px solid $ui-primary-color;
+  padding: 0.5rem;
+  padding-left: 1rem;
 }

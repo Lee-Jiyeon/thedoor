@@ -79,6 +79,8 @@ class LinkFooter extends PureComponent {
               <a href='/invites' target='_blank'><FormattedMessage id='footer.invite' defaultMessage='Invite people' /></a>
             </>
           )}
+          {DividingCircle}
+          <Link to='/notice'>공지사항</Link>
           {canProfileDirectory && (
             <>
               {DividingCircle}

@@ -193,3 +193,7 @@ export function About () {
 export function PrivacyPolicy () {
   return import(/*webpackChunkName: "features/privacy_policy" */'../../privacy_policy');
 }
+
+export function Notice () {
+  return import(/*webpackChunkName: "features/notice" */'../../notice');
+}
